@@ -8,8 +8,10 @@ def calculate_price(price, cash_coupon, percent_coupon):
     under_ten_shipping = 5.95
 
     if price < 10:
-        if price < 10 and cash_coupon == 10:
-            price = 0
+        if cash_coupon == 10:
+            price = under_ten_shipping
+        elif price <= 5 and cash_coupon == 5:
+            price = under_ten_shipping
         else:
             price -= cash_coupon
             price = price - (price * percent_coupon)
