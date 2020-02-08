@@ -6,6 +6,7 @@ def main():
 def calculate_price(price, cash_coupon, percent_coupon):
     sales_tax = .06
     under_ten_shipping = 5.95
+    ten_to_thirty_shipping = 7.95
 
     if price < 10:
         if cash_coupon == 10:
@@ -17,6 +18,17 @@ def calculate_price(price, cash_coupon, percent_coupon):
             price = price - (price * percent_coupon)
             price = price + (price * sales_tax)
             price = price + under_ten_shipping
+
+    if 10 <= price < 30:
+        if cash_coupon == 10 and price == 10:
+            price = ten_to_thirty_shipping
+        else:
+            price -= cash_coupon
+            price = price - (price * percent_coupon)
+            price = price + (price * sales_tax)
+            price = price + ten_to_thirty_shipping
+
+    price = round(price, 3)
 
     return price
 
