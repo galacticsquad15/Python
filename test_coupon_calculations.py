@@ -79,6 +79,30 @@ class MyTestCase(unittest.TestCase):
         price = coupon_calculations.calculate_price(49, 10, .20)
         self.assertEqual(price, 45.022)
 
+    def test_fifty_and_over_five_dollar_ten_coupon(self):
+        price = coupon_calculations.calculate_price(50, 5, .10)
+        self.assertEqual(price, 42.93)
+
+    def test_fifty_and_over_five_dollar_fifteen_coupon(self):
+        price = coupon_calculations.calculate_price(50, 5, .15)
+        self.assertEqual(price, 40.545)
+
+    def test_fifty_and_over_five_dollar_twenty_coupon(self):
+        price = coupon_calculations.calculate_price(50, 5, .20)
+        self.assertEqual(price, 38.16)
+
+    def test_fifty_and_over_ten_dollar_ten_coupon(self):
+        price = coupon_calculations.calculate_price(100, 10, .10)
+        self.assertEqual(price, 85.86)
+
+    def test_fifty_and_over_ten_dollar_fifteen_coupon(self):
+        price = coupon_calculations.calculate_price(100, 10, .15)
+        self.assertEqual(price, 81.09)
+
+    def test_fifty_and_over_ten_dollar_twenty_coupon(self):
+        price = coupon_calculations.calculate_price(100, 10, .20)
+        self.assertEqual(price, 76.32)
+
 
 if __name__ == '__main__':
     unittest.main()
