@@ -1,12 +1,3 @@
-"""
-Run the test, see it fail. Commit to github.
-Write multiply_string()  There a few ways to do this that you have learned.
-Run the test, see it pass. Commit to github.
-Include a docstring as your first line declaring what the function does,
-include reST style with :param and :returns values.
-Include your .py files and github URL.
-"""
-
 def main():
     pass
 
@@ -18,7 +9,8 @@ def multiply_string(message, number):
     :param number: The number of times they want the message to repeat.
     :return: The message that is multiplied the specified number of times.
     """
-    pass
+    multiplied_message = message * number
+    return multiplied_message
 
 if __name__ == '__main__':
     main()
