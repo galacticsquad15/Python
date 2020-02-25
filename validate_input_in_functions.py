@@ -1,5 +1,6 @@
 def main():
-    pass
+    testMessage = score_input('Python Test', int(101))
+    print(testMessage)
 
 
 def score_input(test_name, test_score = 0, invalid_message = 'Invalid test score, try again!'):
@@ -11,7 +12,15 @@ def score_input(test_name, test_score = 0, invalid_message = 'Invalid test score
     :param invalid_message: Defaults to invalid test score, try again.
     :return: Will print out test message
     """
-    return pass
+
+    testScore = str(test_score)
+
+    if test_score > 100 or test_score < 0 or testScore.isalpha():
+        message = invalid_message
+    else:
+        message = test_name + ': ' + testScore
+
+    return message
 
 
 if __name__ == '__main__':

@@ -5,7 +5,7 @@ import validate_input_in_functions
 class MyTestCase(unittest.TestCase):
     def test_score_input_test_name(self):
         testName = validate_input_in_functions.score_input('Python Test')
-        self.assertEqual('Python Test', testName)
+        self.assertEqual('Python Test: 0', testName)
 
     def test_score_input_test_score_valid(self):
         testName = validate_input_in_functions.score_input('Python Test', 90)
