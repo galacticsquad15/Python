@@ -15,12 +15,20 @@ Write the in_set function.
 Run the test, see it pass, commit to github."""
 
 def main():
-    pass
+    my_set = {1, 2, 3, 4, 5}
+    is_in = in_set(1, my_set)
+    print(is_in)
 
 
 def in_set(looking_for, the_set):
-    pass
+    for i in the_set:
+        if i == looking_for:
+            the_truth = True
+            break
+        else:
+            the_truth = False
 
+    return the_truth
 
 if __name__ == '__main__':
     main()

@@ -13,7 +13,7 @@ import set_membership
 
 class MyTestCase(unittest.TestCase):
     def test_in_set_false(self):
-        my_set = set{1, 2, 3, 4, 5}
+        my_set = {1, 2, 3, 4, 5}
         self.assertEqual(set_membership.in_set(6, my_set), False)
 
 
