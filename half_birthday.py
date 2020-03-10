@@ -1,4 +1,4 @@
-import datetime
+from datetime import timedelta
 
 
 def main():
@@ -6,7 +6,9 @@ def main():
 
 
 def my_half_birthday(birthday):
-    pass
+    half_birthday = birthday + timedelta(days=183)
+
+    return half_birthday
 
 
 if __name__ == '__main__':
